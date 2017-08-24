@@ -1,0 +1,38 @@
+page-home-article {
+    ion-content {
+        background: #F4F4F4 !important;
+    }
+    .article_wrap {
+        width: 100%;
+        .article {
+            width: 100%;
+            padding: 3%;
+            background: #fff;
+            margin-bottom: 12px;
+            header {
+                width: 100%;
+                overflow: hidden;
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 9999px;
+                    float: left;
+                    margin-right: 12px;
+                }
+                p {
+                    margin: 0;
+                    float: left;
+                    line-height: 30px;
+                    font-size: 18px;
+                    color: #7A7A7A;
+                }
+                .time {
+                    float: right;
+                }
+            }
+            .buttom {
+                color: #7A7A7A;
+            }
+        }
+    }
+}

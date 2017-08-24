@@ -1,0 +1,27 @@
+page-home {
+    .iheader {
+        display: flex !important;
+        justify-content: flex-start;
+        align-items: center;
+        .userimg {
+            height: 38px;
+            margin-left: 12px;
+            border-radius: 9999px;
+            vertical-align: bottom;
+        }
+        h6 {
+            margin: 0;
+            margin-left: 12px;
+            vertical-align: bottom;
+        }
+        nav {
+            display: flex !important;
+            flex: 1;
+            justify-content: flex-end;
+            ion-icon {
+                margin-right: 22px;
+                font-size: 28px;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<ion-header no-border>
+    <ion-navbar>
+        <section class="iheader">
+            <img class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" />
+            <h6>Devon</h6>
+            <nav>
+                <ion-icon name="notifications"></ion-icon>
+                <ion-icon name="chatbubbles"></ion-icon>
+                <ion-icon name="search"></ion-icon>
+            </nav>
+        </section>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <super-tabs>
+        <super-tab [root]="page1" title="菜谱"></super-tab>
+        <super-tab [root]="page2" title="发现"></super-tab>
+        <super-tab [root]="page3" title="文库"></super-tab>
+    </super-tabs>
+</ion-content>
