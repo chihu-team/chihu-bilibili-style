@@ -3,6 +3,11 @@ page-home {
         display: flex !important;
         justify-content: flex-start;
         align-items: center;
+        ion-icon {
+            font-size: 28px;
+            position: relative;
+            left: -4px;
+        }
         .userimg {
             height: 38px;
             margin-left: 12px;
@@ -11,7 +16,7 @@ page-home {
         }
         h6 {
             margin: 0;
-            margin-left: 12px;
+            margin-left: 8px;
             vertical-align: bottom;
         }
         nav {

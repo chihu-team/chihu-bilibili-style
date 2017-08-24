@@ -6,6 +6,11 @@ export default StyleSheet.create({
     'justifyContent': 'flex-start',
     'alignItems': 'center'
   },
+  'page-home iheader ion-icon': {
+    'fontSize': [{ 'unit': 'px', 'value': 28 }],
+    'position': 'relative',
+    'left': [{ 'unit': 'px', 'value': -4 }]
+  },
   'page-home iheader userimg': {
     'height': [{ 'unit': 'px', 'value': 38 }],
     'marginLeft': [{ 'unit': 'px', 'value': 12 }],
@@ -14,7 +19,7 @@ export default StyleSheet.create({
   },
   'page-home iheader h6': {
     'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
-    'marginLeft': [{ 'unit': 'px', 'value': 12 }],
+    'marginLeft': [{ 'unit': 'px', 'value': 8 }],
     'verticalAlign': 'bottom'
   },
   'page-home iheader nav': {

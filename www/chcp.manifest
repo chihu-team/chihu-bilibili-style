@@ -1,0 +1,62 @@
+[
+  {
+    "file": "assets/fonts/ionicons.woff",
+    "hash": "81414686e99c00d2921e03dd53c0ab04"
+  },
+  {
+    "file": "assets/fonts/ionicons.woff2",
+    "hash": "311d81961c5880647fec7eaca1221b2a"
+  },
+  {
+    "file": "assets/icon/favicon.ico",
+    "hash": "0350f4b3a2067110b1e642ee5931a38a"
+  },
+  {
+    "file": "build/0.js",
+    "hash": "8b800aad8aadf7357c42a15b8a2dd20c"
+  },
+  {
+    "file": "build/1.js",
+    "hash": "c075722c741772bf3b7707658245d0df"
+  },
+  {
+    "file": "build/2.js",
+    "hash": "3881a6f6da69ba216b096fe149626f26"
+  },
+  {
+    "file": "build/3.js",
+    "hash": "03f6306e73b2e37ae98da9d4b386ecfb"
+  },
+  {
+    "file": "build/main.css",
+    "hash": "d620a67e7906163f7b1783524942492a"
+  },
+  {
+    "file": "build/main.js",
+    "hash": "0871e48276276dea5354bc6a74d4cb55"
+  },
+  {
+    "file": "build/polyfills.js",
+    "hash": "cdb289d3a60d7aa4b10424dbe2cd76c4"
+  },
+  {
+    "file": "build/sw-toolbox.js",
+    "hash": "2770efb889cc10c4de88d0b746c2a13c"
+  },
+  {
+    "file": "build/vendor.js",
+    "hash": "ee542ef894ed65420986b220b68d30d5"
+  },
+  {
+    "file": "index.html",
+    "hash": "2aba2978bf1d81a951bdd9279599fee0"
+  },
+  {
+    "file": "manifest.json",
+    "hash": "df9b99468d4bd4cf2fee5d24ed9badbf"
+  },
+  {
+    "file": "service-worker.js",
+    "hash": "25c3d576a339ab4bbc4750b2363cd14f"
+  }
+]

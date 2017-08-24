@@ -9,16 +9,20 @@ page-home-share {
             padding: 3%;
             background: #fff;
             display: flex;
+            border-bottom: 1px solid #F4F4F4;
             .userimg {
-                width: 45px;
-                height: 45px;
+                width: 30px;
+                height: 30px;
                 border-radius: 9999px;
                 margin-right: 12px;
             }
             .dec {
                 flex: 1;
-                h4 {
+                .name {
+                    color: #7A7A7A;
                     margin: 0;
+                    line-height: 30px;
+                    font-size: 16px;
                 }
                 .imgs_wrap {
                     width: 100%;
@@ -42,6 +46,7 @@ page-home-share {
                     width: 100%;
                     overflow: hidden;
                     padding: 10px 0;
+                    color: #7A7A7A;
                     .time {
                         float: left;
                     }

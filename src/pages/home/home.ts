@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -11,8 +11,15 @@ export class HomePage {
   page2: any = 'HomeSharePage';
   page3: any = 'HomeArticlePage';
 
-  constructor(public navCtrl: NavController) {
+  constructor(
+    public navCtrl: NavController,
+    public menuCtrl: MenuController
+  ) {
 
+  }
+
+  openMenu() {
+    this.menuCtrl.open();
   }
 
 }

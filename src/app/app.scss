@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,58 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+ion-menu {
+    .top_ban {
+        width: 100%;
+        padding: 5%;
+        height: 190px;
+        position: relative;
+        overflow: hidden;
+        .bilibili {
+            position: absolute;
+            bottom: -42px;
+            right: -30px;
+            z-index: 1;
+            svg {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        .lv {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            svg {
+                width: 30px;
+                height: 30px;
+                vertical-align: text-bottom;
+                position: relative;
+                top: 6px;
+            }
+        }
+        .level {
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 8px;
+            border: 1px solid #fff;
+            font-weight: 700;
+        }
+        .userimg {
+            width: 80px;
+            height: 80px;
+            border: 4px solid #fff;
+            border-radius: 9999px;
+        }
+        h4 {
+            margin-left: 14px;
+        }
+        p,
+        h4 {
+            position: relative;
+            z-index: 4;
+        }
+    }
+    .list {
+        margin: 0 0 16px !important;
+    }
+}

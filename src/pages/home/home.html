@@ -1,7 +1,8 @@
 <ion-header no-border>
-    <ion-navbar>
+    <ion-navbar class="theme_pink">
         <section class="iheader">
-            <img class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" />
+            <ion-icon name="list" (click)="openMenu()"></ion-icon>
+            <img (click)="openMenu()" class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" />
             <h6>Devon</h6>
             <nav>
                 <ion-icon name="notifications"></ion-icon>
@@ -14,7 +15,7 @@
 
 <ion-content>
 
-    <super-tabs>
+    <super-tabs class="theme_pink">
         <super-tab [root]="page1" title="菜谱"></super-tab>
         <super-tab [root]="page2" title="发现"></super-tab>
         <super-tab [root]="page3" title="文库"></super-tab>

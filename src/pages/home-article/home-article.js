@@ -28,7 +28,7 @@ export default StyleSheet.create({
     'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
     'float': 'left',
     'lineHeight': [{ 'unit': 'px', 'value': 30 }],
-    'fontSize': [{ 'unit': 'px', 'value': 18 }],
+    'fontSize': [{ 'unit': 'px', 'value': 16 }],
     'color': '#7A7A7A'
   },
   'page-home-article article_wrap article header time': {

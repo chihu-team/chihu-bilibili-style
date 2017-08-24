@@ -84,4 +84,8 @@
     <plugin name="cordova-plugin-device" spec="1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
     <engine name="android" spec="~6.1.2" />
+    <plugin name="cordova-hot-code-push-plugin" spec="~1.5.3" />
+    <chcp>
+        <config-file url=" http://www.devonhello.com/hotcode-bilibili-style/chcp.json" />
+    </chcp>
 </widget>
