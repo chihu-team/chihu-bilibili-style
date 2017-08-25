@@ -1,3 +1,66 @@
 page-open-work {
-
+    .work_banner {
+        width: 100%;
+        height: 230px;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+    header {
+        width: 100%;
+        padding: 2.5%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        .userimg {
+            width: 42px;
+            height: 42px;
+            border-radius: 9999px;
+            margin-right: 12px;
+        }
+        .base {
+            h6,
+            p {
+                margin: 0;
+                line-height: 20px;
+            }
+        }
+        .other {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: flex-end;
+            .btn {
+                padding: 6px 18px;
+                border: 1px solid #ddd;
+            }
+        }
+    }
+    .content_wrap {
+        padding: 2.5%;
+        .dec {
+            margin-bottom: 45px;
+        }
+        .foods {
+            margin-bottom: 50px;
+            ion-row {
+                border-block-end: 1px solid #f3f4f5;
+                margin-bottom: 8px;
+            }
+        }
+        .step {
+            margin-bottom: 50px;
+            ion-card {
+                box-shadow: 0 0 0 transparent !important;
+            }
+        }
+        .tip {
+            width: 100%;
+            padding: 3%;
+            background: #ddd;
+            color: #3a3a3a;
+            h4 {
+                margin-top: 0;
+            }
+        }
+    }
 }

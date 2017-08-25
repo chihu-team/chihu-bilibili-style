@@ -15,11 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HomeSharePage {
 
+  rootNavCtrl: NavController;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.rootNavCtrl = navParams.get('rootNavCtrl');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomeSharePage');
+  //查看分享详情
+  open(){
+    this.rootNavCtrl.push( "OpenSharePage" );
   }
 
 }

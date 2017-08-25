@@ -15,11 +15,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class OpenArticlePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  _theme;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad OpenArticlePage');
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams
+  ) {
+    
   }
 
 }

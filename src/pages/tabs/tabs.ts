@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { ThemeProvider } from '../../providers/theme/theme';
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
+import { IclassPage } from '../iclass/iclass';
+import { MessagePage } from '../message/message';
 import { HomePage } from '../home/home';
+import { DynamicPage } from '../dynamic/dynamic';
 import { Events } from 'ionic-angular';
 
 @Component({
@@ -11,8 +12,9 @@ import { Events } from 'ionic-angular';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  tab2Root = IclassPage;
+  tab3Root = DynamicPage;
+  tab4Root = MessagePage;
 
   _theme;
 

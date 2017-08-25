@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ThemeProvider } from '../../providers/theme/theme';
 
 /**
  * Generated class for the OpenWorkPage page.
@@ -20,10 +19,9 @@ export class OpenWorkPage {
 
   constructor(
     public navCtrl: NavController, 
-    public navParams: NavParams,
-    public themeProvider: ThemeProvider
+    public navParams: NavParams
   ) {
-    this._theme = this.themeProvider._theme;
+    
   }
 
 }

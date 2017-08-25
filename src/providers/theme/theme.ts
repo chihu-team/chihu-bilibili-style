@@ -14,6 +14,7 @@ export class ThemeProvider {
 
   //默认主题
   _theme = 'theme_pink';
+  _old_theme = 'theme_pink';
 
   constructor(
     private storage: Storage,
@@ -26,7 +27,9 @@ export class ThemeProvider {
   init(){
     this.storage.get('theme').then((val) => {
       if(val){
-        this._theme = val;
+        
+        this._theme = val.nowTheme;
+        this._old_theme = val.oldTheme;
         this.events.publish('theme', this._theme);
       }
       console.log('Your theme is', this._theme);
@@ -35,8 +38,12 @@ export class ThemeProvider {
 
   //设置/切换主题
   setTheme( theme ){
+    var themeObj = {};
+    themeObj['nowTheme'] = theme;
+    themeObj['oldTheme'] = this._theme;
+    this._old_theme = this._theme;
     this._theme = theme;
-    this.storage.set('theme', theme);
+    this.storage.set('theme', themeObj);
     this.events.publish('theme', this._theme);
   }
 

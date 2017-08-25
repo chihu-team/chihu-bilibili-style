@@ -4,8 +4,9 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { IonicStorageModule } from '@ionic/storage';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { IclassPage } from '../pages/iclass/iclass';
+import { DynamicPage } from '../pages/dynamic/dynamic';
+import { MessagePage } from '../pages/message/message';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -18,9 +19,10 @@ import { UserProvider } from '../providers/user/user';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    IclassPage,
+    MessagePage,
     HomePage,
+    DynamicPage,
     TabsPage
   ],
   imports: [
@@ -34,9 +36,10 @@ import { UserProvider } from '../providers/user/user';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    IclassPage,
+    MessagePage,
     HomePage,
+    DynamicPage,
     TabsPage
   ],
   providers: [

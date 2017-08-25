@@ -43,7 +43,8 @@ export class MyApp {
   //夜间模式
   setDark(){
     if(this._theme == "theme_dark"){
-      this.themeProvider.setTheme( this._oldTheme == "theme_dark"?"theme_pink":this._oldTheme );
+      this._theme = this.themeProvider._old_theme;
+      this.themeProvider.setTheme( this._theme );
     }else{
       this.themeProvider.setTheme( "theme_dark" );
     }

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, MenuController, Events } from 'ionic-angular';
-import { ThemeProvider } from '../../providers/theme/theme';
+import { NavController, MenuController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -16,15 +15,8 @@ export class HomePage {
 
   constructor(
     public navCtrl: NavController,
-    public menuCtrl: MenuController,
-    private themeProvider: ThemeProvider,
-    public events: Events
-  ) {
-    this._theme = this.themeProvider._theme;
-    events.subscribe('theme', (theme) => {
-      this._theme = theme;
-    });
-  }
+    public menuCtrl: MenuController
+  ) {}
 
   openMenu() {
     this.menuCtrl.open();

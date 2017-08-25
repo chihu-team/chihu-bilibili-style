@@ -15,11 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HomeArticlePage {
 
+  rootNavCtrl: NavController;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.rootNavCtrl = navParams.get('rootNavCtrl');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomeArticlePage');
+  //查看文章详情
+  open(){
+    this.rootNavCtrl.push( "OpenArticlePage" );
   }
 
 }

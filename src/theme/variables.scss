@@ -59,6 +59,14 @@ super-tabs-container {
     height: calc(100% - 40px) !important;
 }
 
+svg {
+    vertical-align: text-bottom !important;
+}
+
+.bar-button-default {
+    color: #fff !important;
+}
+
 //少女粉
 .theme_pink {
     & .toolbar-background,
