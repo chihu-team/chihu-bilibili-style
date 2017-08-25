@@ -12,6 +12,7 @@ export class MyApp {
   @ViewChild('content') nav: NavController
   rootPage:any = TabsPage;
   _theme;
+  _oldTheme;
 
   constructor(
     platform: Platform, 
@@ -21,7 +22,7 @@ export class MyApp {
     public menuCtrl: MenuController,
     public events: Events
   ) {
-    this._theme = this.themeProvider._theme;
+    this._oldTheme = this._theme = this.themeProvider._theme;
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -29,7 +30,7 @@ export class MyApp {
       splashScreen.hide();
     });
     events.subscribe('theme', (theme) => {
-      this._theme = theme;
+      this._oldTheme = this._theme = theme;
     });
   }
 
@@ -37,5 +38,15 @@ export class MyApp {
   theme(){
     this.menuCtrl.close();
     this.nav.push( "ThemePage" );
+  }
+
+  //夜间模式
+  setDark(){
+    if(this._theme == "theme_dark"){
+      this.themeProvider.setTheme( this._oldTheme == "theme_dark"?"theme_pink":this._oldTheme );
+    }else{
+      this.themeProvider.setTheme( "theme_dark" );
+    }
+    
   }
 }

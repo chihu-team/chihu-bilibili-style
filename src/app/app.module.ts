@@ -13,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import { ThemeProvider } from '../providers/theme/theme';
+import { UserProvider } from '../providers/user/user';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { ThemeProvider } from '../providers/theme/theme';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      tabsHideOnSubPages: true
+    }),
     SuperTabsModule.forRoot(),
     IonicStorageModule.forRoot()
   ],
@@ -40,7 +43,8 @@ import { ThemeProvider } from '../providers/theme/theme';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ThemeProvider
+    ThemeProvider,
+    UserProvider
   ]
 })
 export class AppModule {}

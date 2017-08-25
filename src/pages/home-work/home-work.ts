@@ -15,11 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HomeWorkPage {
 
+  rootNavCtrl: NavController;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.rootNavCtrl = navParams.get('rootNavCtrl');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomeWorkPage');
+  //查看菜谱详情
+  open(){
+    this.rootNavCtrl.push( "OpenWorkPage" );
   }
 
 }
