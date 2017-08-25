@@ -56,5 +56,29 @@ export default StyleSheet.create({
   },
   'ion-menu list': {
     'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 16 }, { 'unit': 'string', 'value': '!important' }]
+  },
+  'ion-menu footer_wrap': {
+    'width': [{ 'unit': '%H', 'value': 1 }],
+    'display': 'flex',
+    'justifyContent': 'center',
+    'alignItems': 'center',
+    'alignContent': 'center'
+  },
+  'ion-menu footer_wrap its': {
+    'display': 'flex',
+    'justifyContent': 'center',
+    'alignItems': 'center',
+    'alignContent': 'center',
+    'flex': '1'
+  },
+  'ion-menu footer_wrap its span': {
+    'paddingLeft': [{ 'unit': 'px', 'value': 8 }]
+  },
+  'ion-menu footer_wrap its svg': {
+    'width': [{ 'unit': 'px', 'value': 24 }],
+    'height': [{ 'unit': 'px', 'value': 24 }]
+  },
+  'ion-menu toolbar': {
+    'minHeight': [{ 'unit': 'px', 'value': 42 }]
   }
 });

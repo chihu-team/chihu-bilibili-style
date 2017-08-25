@@ -88,4 +88,5 @@
     <chcp>
         <config-file url=" http://www.devonhello.com/hotcode-bilibili-style/chcp.json" />
     </chcp>
+    <plugin name="cordova-sqlite-storage" spec="~2.0.4" />
 </widget>

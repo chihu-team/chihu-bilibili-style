@@ -66,4 +66,28 @@ ion-menu {
     .list {
         margin: 0 0 16px !important;
     }
+    .footer_wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .its {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            span {
+                padding-left: 8px;
+            }
+            flex: 1;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    .toolbar {
+        min-height: 42px;
+    }
 }

@@ -55,7 +55,11 @@ super-tabs-toolbar>ion-toolbar.toolbar .tab-buttons-container .tab-buttons super
     height: 38px !important;
 }
 
-//粉红主题
+super-tabs-container {
+    height: calc(100% - 40px) !important;
+}
+
+//少女粉
 .theme_pink {
     & .toolbar-background,
     & .toolbar-background,
@@ -63,6 +67,10 @@ super-tabs-toolbar>ion-toolbar.toolbar .tab-buttons-container .tab-buttons super
     & .top_ban {
         background: #fb7299 !important;
         color: #fff !important;
+    }
+    & .toolbar-title,
+    & .back-button {
+        color: #fff;
     }
     & .button-md-primary {
         background-color: #fff;
@@ -75,5 +83,209 @@ super-tabs-toolbar>ion-toolbar.toolbar .tab-buttons-container .tab-buttons super
     }
     & .bilibili svg {
         fill: #EC6B90;
+    }
+    & .footer_wrap {
+        color: #fff !important;
+        .its svg {
+            fill: #fff !important;
+        }
+    }
+}
+
+//夜间模式
+.theme_dark {
+    & .toolbar-background,
+    & .toolbar-background,
+    & .toolbar-content,
+    & .top_ban {
+        background: #2d2d2d !important;
+        color: #fff !important;
+    }
+    & .toolbar-title,
+    & .back-button {
+        color: #fff;
+    }
+    & .button-md-primary {
+        background-color: #fff;
+    }
+    & .tab-button[aria-selected=true] .tab-button-icon {
+        color: #2d2d2d !important;
+    }
+    & ion-item {
+        color: #2d2d2d !important;
+    }
+    & .bilibili svg {
+        fill: #424242;
+    }
+    & .footer_wrap {
+        color: #fff !important;
+        .its svg {
+            fill: #fff !important;
+        }
+    }
+}
+
+//姨妈红
+.theme_red {
+    & .toolbar-background,
+    & .toolbar-background,
+    & .toolbar-content,
+    & .top_ban {
+        background: #f44336 !important;
+        color: #fff !important;
+    }
+    & .toolbar-title,
+    & .back-button {
+        color: #fff;
+    }
+    & .button-md-primary {
+        background-color: #fff;
+    }
+    & .tab-button[aria-selected=true] .tab-button-icon {
+        color: #f44336 !important;
+    }
+    & ion-item {
+        color: #f44336 !important;
+    }
+    & .bilibili svg {
+        fill: #de3e33;
+    }
+    & .footer_wrap {
+        color: #fff !important;
+        .its svg {
+            fill: #fff !important;
+        }
+    }
+}
+
+//咸蛋黄
+.theme_yellow {
+    & .toolbar-background,
+    & .toolbar-background,
+    & .toolbar-content,
+    & .top_ban {
+        background: #ffc107 !important;
+        color: #fff !important;
+    }
+    & .toolbar-title,
+    & .back-button {
+        color: #fff;
+    }
+    & .button-md-primary {
+        background-color: #fff;
+    }
+    & .tab-button[aria-selected=true] .tab-button-icon {
+        color: #ffc107 !important;
+    }
+    & ion-item {
+        color: #ffc107 !important;
+    }
+    & .bilibili svg {
+        fill: #ecba24;
+    }
+    & .footer_wrap {
+        color: #fff !important;
+        .its svg {
+            fill: #fff !important;
+        }
+    }
+}
+
+//早苗绿
+.theme_green {
+    & .toolbar-background,
+    & .toolbar-background,
+    & .toolbar-content,
+    & .top_ban {
+        background: #8bc34a !important;
+        color: #fff !important;
+    }
+    & .toolbar-title,
+    & .back-button {
+        color: #fff;
+    }
+    & .button-md-primary {
+        background-color: #fff;
+    }
+    & .tab-button[aria-selected=true] .tab-button-icon {
+        color: #8bc34a !important;
+    }
+    & ion-item {
+        color: #8bc34a !important;
+    }
+    & .bilibili svg {
+        fill: #91d83f;
+    }
+    & .footer_wrap {
+        color: #fff !important;
+        .its svg {
+            fill: #fff !important;
+        }
+    }
+}
+
+//胖次蓝
+.theme_blue {
+    & .toolbar-background,
+    & .toolbar-background,
+    & .toolbar-content,
+    & .top_ban {
+        background: #2196f3 !important;
+        color: #fff !important;
+    }
+    & .toolbar-title,
+    & .back-button {
+        color: #fff;
+    }
+    & .button-md-primary {
+        background-color: #fff;
+    }
+    & .tab-button[aria-selected=true] .tab-button-icon {
+        color: #2196f3 !important;
+    }
+    & ion-item {
+        color: #2196f3 !important;
+    }
+    & .bilibili svg {
+        fill: #1e8ae0;
+    }
+    & .footer_wrap {
+        color: #fff !important;
+        .its svg {
+            fill: #fff !important;
+        }
+    }
+}
+
+//基佬紫
+.theme_purple {
+    & .toolbar-background,
+    & .toolbar-background,
+    & .toolbar-content,
+    & .top_ban {
+        background: #9c27b0 !important;
+        color: #fff !important;
+    }
+    & .toolbar-title,
+    & .back-button {
+        color: #fff;
+    }
+    & .button-md-primary {
+        background-color: #fff;
+    }
+    & .tab-button[aria-selected=true] .tab-button-icon {
+        color: #9c27b0 !important;
+    }
+    & ion-item {
+        color: #9c27b0 !important;
+    }
+    & .bilibili svg {
+        fill: #c01fdc;
+    }
+    & .footer_wrap {
+        color: #fff !important;
+        .its svg {
+            fill: #fff !important;
+        }
     }
 }

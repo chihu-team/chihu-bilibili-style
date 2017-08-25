@@ -13,27 +13,31 @@
   },
   {
     "file": "build/0.js",
-    "hash": "8b800aad8aadf7357c42a15b8a2dd20c"
+    "hash": "5d72bf6e9e47e07e3cd9969ce1087364"
   },
   {
     "file": "build/1.js",
-    "hash": "c075722c741772bf3b7707658245d0df"
+    "hash": "d973c8174d7d31071605d05f91d2963f"
   },
   {
     "file": "build/2.js",
-    "hash": "3881a6f6da69ba216b096fe149626f26"
+    "hash": "1cd971f62453687bf963725d0ba5ee29"
   },
   {
     "file": "build/3.js",
-    "hash": "03f6306e73b2e37ae98da9d4b386ecfb"
+    "hash": "23e1d9812be6ccb3cfbc5bb6018d915d"
+  },
+  {
+    "file": "build/4.js",
+    "hash": "978485c8b5bff8f7e0fb94febf860616"
   },
   {
     "file": "build/main.css",
-    "hash": "d620a67e7906163f7b1783524942492a"
+    "hash": "e45bc7fecb051a6c666f38c0c25ef89b"
   },
   {
     "file": "build/main.js",
-    "hash": "0871e48276276dea5354bc6a74d4cb55"
+    "hash": "11e65ada5fb69df9b97c9cc7e13b11d4"
   },
   {
     "file": "build/polyfills.js",
@@ -45,7 +49,7 @@
   },
   {
     "file": "build/vendor.js",
-    "hash": "ee542ef894ed65420986b220b68d30d5"
+    "hash": "d5260edd1fa512ec43e10be7f5d2c199"
   },
   {
     "file": "index.html",
