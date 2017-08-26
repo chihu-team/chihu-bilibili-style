@@ -9,20 +9,20 @@
                 <svg t="1503584363674" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2435" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"><defs><style type="text/css"></style></defs><path d="M867.382475 316.520887c-49.119721 0-88.988754 39.907918-88.988754 88.989777 0 11.714809 2.294252 22.87294 6.360871 33.092699l-139.845025 55.896054-93.715405-187.43388c29.197996-14.46034 49.223075-44.702108 49.223075-79.533404 0-49.080835-39.873126-88.988754-88.9908-88.988754-49.118698 0-88.98773 39.907918-88.98773 88.988754 0 34.831296 20.020986 65.073064 49.222051 79.533404l-93.717452 187.43388-139.878794-55.896054c4.100388-10.219759 6.39464-21.37789 6.39464-33.092699 0-49.081858-39.872103-88.989777-88.988754-88.989777-49.119721 0-88.988754 39.907918-88.988754 88.989777 0 49.186236 39.869033 88.988754 88.988754 88.988754 5.006014 0 10.012028-0.345877 14.842033-1.251503l47.413869 281.636379c4.484128 44.494377 44.494377 75.572186 84.540442 75.572186l413.869029 0c44.494377 0 80.020498-31.076786 88.988754-75.572186L852.540442 493.246891c4.830005 0.905626 9.837042 1.251503 14.842033 1.251503 49.117674 0 88.989777-39.802518 88.989777-88.988754C956.372252 356.427782 916.500149 316.520887 867.382475 316.520887z" fill="#f4ea2a" p-id="2436"></path></svg>
                 <span class="level">LV 10</span>
             </div>
-            <img class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" />
+            <img (click)="openPage( 'PersonalPage' );" class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" />
             <h4>Devon</h4>
             <p>粉丝：200&nbsp;|&nbsp;菜谱：133&nbsp;|&nbsp;文库：332</p>
         </section>
         <ion-list no-border>
-            <ion-item>
+            <ion-item (click)="openPage( 'PersonalPage' );">
                 <ion-icon name='star' item-left color="h"></ion-icon>
                 个人中心
             </ion-item>
-            <ion-item>
+            <ion-item (click)="openPage( 'CollectionPage' );">
                 <ion-icon name='document' item-left color="h"></ion-icon>
                 我的收藏
             </ion-item>
-            <ion-item>
+            <ion-item (click)="openPage( 'FocusPage' );">
                 <ion-icon name='time' item-left color="h"></ion-icon>
                 我的关注
             </ion-item>
@@ -30,16 +30,15 @@
                 <ion-icon name='time' item-left color="h"></ion-icon>
                 我的好友
             </ion-item>
-            <ion-item>
+            <ion-item (click)="openPage( 'PrivateSharePage' );">
                 <ion-icon name='bookmarks' item-left color="h"></ion-icon>
                 我的动态
             </ion-item>
-
-            <ion-item>
+            <ion-item (click)="openPage( 'PrivateWorkPage' );">
                 <ion-icon name='eye' item-left color="h"></ion-icon>
                 私人菜谱
             </ion-item>
-            <ion-item>
+            <ion-item (click)="openPage( 'PrivateArticlePage' );">
                 <ion-icon name='star' item-left color="h"></ion-icon>
                 私人文库
             </ion-item>
@@ -49,7 +48,7 @@
     <ion-footer [ngClass]="{'theme_pink':_theme == 'theme_pink','theme_dark':_theme == 'theme_dark','theme_red':_theme == 'theme_red','theme_yellow':_theme == 'theme_yellow','theme_green':_theme == 'theme_green','theme_blue':_theme == 'theme_blue','theme_purple':_theme == 'theme_purple'}">
         <ion-toolbar>
             <section class="footer_wrap">
-                <div class="its">
+                <div class="its" (click)="setting();">
                     <svg t="1503588756864" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8994" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64"><defs><style type="text/css"></style></defs><path d="M512.923573 440.551888c-39.92176-0.3429-72.54384 31.721791-72.910729 71.649195-0.341489 39.92176 31.721791 72.545251 71.649195 72.91214 39.897772 0.341489 72.545251-31.728846 72.910729-71.650607C584.917079 473.535212 552.821344 440.893377 512.923573 440.551888L512.923573 440.551888zM512.923573 440.551888" p-id="8995"></path><path d="M512.000706 64.00097c-247.42291 0-447.999735 200.578236-447.999735 447.999735s200.576825 447.999735 447.999735 447.999735c247.42291 0 447.999735-200.578236 447.999735-447.999735S759.423616 64.00097 512.000706 64.00097L512.000706 64.00097zM767.289152 572.032219l-74.069252-0.644878-11.988805 34.972992 49.752976 50.646209-77.96392 76.614897-49.77132-50.646209-35.177603 11.37356-0.644878 74.074896-114.743135-0.976489 0.646289-74.098885-34.97017-11.984571-50.630687 49.751564-76.634653-77.962509 50.651854-49.775553-11.379205-35.17337-74.074896-0.644878 1.001889-114.748779 74.059374 0.650522 11.998683-34.971581-49.765676-50.64762 77.980854-76.619131 49.77132 50.646209 35.16067-11.374971 0.663222-74.073485 114.743135 1.001889-0.649111 74.077719 34.956058 11.984571 50.641976-49.751564 76.634653 77.962509-50.646209 49.77132 11.377793 35.17337 74.073485 0.629356L767.289152 572.032219 767.289152 572.032219zM767.289152 572.032219" p-id="8996"></path></svg>
                     <span>设置</span>
                 </div>

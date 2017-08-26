@@ -80,5 +80,8 @@ export default StyleSheet.create({
   },
   'ion-menu toolbar': {
     'minHeight': [{ 'unit': 'px', 'value': 42 }]
+  },
+  '::-webkit-scrollbar': {
+    'display': 'none !important'
   }
 });

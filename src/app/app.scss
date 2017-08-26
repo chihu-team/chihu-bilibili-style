@@ -91,3 +91,7 @@ ion-menu {
         min-height: 42px;
     }
 }
+
+::-webkit-scrollbar {
+    display: none !important;
+}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { ThemeProvider } from '../../providers/theme/theme';
 /**
  * Generated class for the CollectionPage page.
  *
@@ -15,11 +15,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CollectionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  _theme;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CollectionPage');
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public themeProvider: ThemeProvider
+  ) {
+    this._theme = this.themeProvider._theme;
   }
 
 }

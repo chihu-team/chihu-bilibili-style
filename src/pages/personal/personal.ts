@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { ThemeProvider } from '../../providers/theme/theme';
 /**
  * Generated class for the PersonalPage page.
  *
@@ -15,11 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PersonalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  _theme;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public themeProvider: ThemeProvider
+  ) {
+    this._theme = this.themeProvider._theme;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PersonalPage');
-  }
 
 }

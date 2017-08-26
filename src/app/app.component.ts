@@ -40,6 +40,17 @@ export class MyApp {
     this.nav.push( "ThemePage" );
   }
 
+  //设置
+  setting(){
+    this.menuCtrl.close();
+    this.nav.push( "SettingPage" );
+  }
+
+  openPage( pageName ){
+    this.menuCtrl.close();
+    this.nav.push( pageName );
+  }
+
   //夜间模式
   setDark(){
     if(this._theme == "theme_dark"){

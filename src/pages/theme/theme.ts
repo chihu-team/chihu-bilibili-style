@@ -20,7 +20,7 @@ export class ThemePage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private themeProvider: ThemeProvider
+    public themeProvider: ThemeProvider
   ) {
     this._theme = this.themeProvider._theme;
   }
