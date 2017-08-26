@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ThemeProvider } from '../../providers/theme/theme';
 /**
- * Generated class for the SettingPage page.
+ * Generated class for the MitPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
@@ -10,10 +10,10 @@ import { ThemeProvider } from '../../providers/theme/theme';
 
 @IonicPage()
 @Component({
-  selector: 'page-setting',
-  templateUrl: 'setting.html',
+  selector: 'page-mit',
+  templateUrl: 'mit.html',
 })
-export class SettingPage {
+export class MitPage {
 
   _theme;
   
@@ -23,14 +23,6 @@ export class SettingPage {
     public themeProvider: ThemeProvider
   ) {
     this._theme = this.themeProvider._theme;
-  }
-
-  MIT(){
-    this.navCtrl.push( "MitPage" );
-  }
-
-  about(){
-    this.navCtrl.push( "AboutPage" );
   }
 
 }

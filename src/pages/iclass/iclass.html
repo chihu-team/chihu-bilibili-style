@@ -1,11 +1,160 @@
 <ion-header no-border>
     <ion-navbar>
-        <ion-title>
-            分类
-        </ion-title>
+        <section class="iheader">
+            <ion-icon name="list" (click)="openMenu()"></ion-icon>
+            <img (click)="openMenu()" class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" />
+            <h6>Devon</h6>
+            <nav>
+                <ion-icon name="notifications"></ion-icon>
+                <ion-icon name="chatbubbles"></ion-icon>
+                <ion-icon name="search"></ion-icon>
+            </nav>
+        </section>
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+    <section class="iclass_wrap">
+        <ion-list-header>
+            热门分类
+        </ion-list-header>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a1cb7a48a56011e6947d0242ac110002_200w_200h.jpg">
+            <p>家常菜</p>
+        </div>
+        <div class="ic">
+            <img src="http://s1.cdn.xiachufang.com/a243ec26a56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>下饭菜</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a1c1f180a56011e6947d0242ac110002_200w_200h.jpg">
+            <p>烘焙</p>
+        </div>
+        <div class="ic">
+            <img src="http://s1.cdn.xiachufang.com/a1e31c7aa56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>肉类</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a28f3adca56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>早餐</p>
+        </div>
+        <div class="ic">
+            <img src="http://s1.cdn.xiachufang.com/a276a832a56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>蔬菜</p>
+        </div>
+        <div class="ic">
+            <img src="http://static.xiachufang.com/catpic-20150327-汤粥主食.jpg">
+            <p>汤粥主食</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a2902c94a56011e6947d0242ac110002_200w_200h.jpg">
+            <p>鱼虾水产</p>
+        </div>
+        <ion-list-header>
+            菜式
+        </ion-list-header>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a1c486b6a56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>快手菜</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a2300e22a56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>素菜</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a23a3cb2a56011e6947d0242ac110002_200w_200h.jpg">
+            <p>甜品饮品</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a2579492a56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>小吃</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a1decba2a56011e6947d0242ac110002_200w_200h.jpg">
+            <p>零食</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/61dcd2e39d5f4678b1c1364da49ea3e7_200w_200h.png">
+            <p>懒人食谱</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a251366aa56011e6947d0242ac110002_200w_200h.jpg">
+            <p>下酒菜</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a1f008e0a56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>沙拉凉菜</p>
+        </div>
+        <ion-list-header>
+            热门分类
+        </ion-list-header>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a1cb7a48a56011e6947d0242ac110002_200w_200h.jpg">
+            <p>家常菜</p>
+        </div>
+        <div class="ic">
+            <img src="http://s1.cdn.xiachufang.com/a243ec26a56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>下饭菜</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a1c1f180a56011e6947d0242ac110002_200w_200h.jpg">
+            <p>烘焙</p>
+        </div>
+        <div class="ic">
+            <img src="http://s1.cdn.xiachufang.com/a1e31c7aa56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>肉类</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a28f3adca56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>早餐</p>
+        </div>
+        <div class="ic">
+            <img src="http://s1.cdn.xiachufang.com/a276a832a56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>蔬菜</p>
+        </div>
+        <div class="ic">
+            <img src="http://static.xiachufang.com/catpic-20150327-汤粥主食.jpg">
+            <p>汤粥主食</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a2902c94a56011e6947d0242ac110002_200w_200h.jpg">
+            <p>鱼虾水产</p>
+        </div>
+        <ion-list-header>
+            菜式
+        </ion-list-header>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a1c486b6a56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>快手菜</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a2300e22a56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>素菜</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a23a3cb2a56011e6947d0242ac110002_200w_200h.jpg">
+            <p>甜品饮品</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a2579492a56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>小吃</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a1decba2a56011e6947d0242ac110002_200w_200h.jpg">
+            <p>零食</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/61dcd2e39d5f4678b1c1364da49ea3e7_200w_200h.png">
+            <p>懒人食谱</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a251366aa56011e6947d0242ac110002_200w_200h.jpg">
+            <p>下酒菜</p>
+        </div>
+        <div class="ic">
+            <img src="http://s2.cdn.xiachufang.com/a1f008e0a56011e6bc9d0242ac110002_200w_200h.jpg">
+            <p>沙拉凉菜</p>
+        </div>
 
+    </section>
 </ion-content>

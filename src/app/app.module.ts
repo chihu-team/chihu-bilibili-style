@@ -12,6 +12,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AppVersion } from '@ionic-native/app-version';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import { ThemeProvider } from '../providers/theme/theme';
 import { UserProvider } from '../providers/user/user';
@@ -45,6 +46,7 @@ import { UserProvider } from '../providers/user/user';
   providers: [
     StatusBar,
     SplashScreen,
+    AppVersion,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ThemeProvider,
     UserProvider

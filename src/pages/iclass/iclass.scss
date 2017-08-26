@@ -1,1 +1,64 @@
-page-iclass {}
+page-iclass {
+    .iheader {
+        display: flex !important;
+        justify-content: flex-start;
+        align-items: center;
+        ion-icon {
+            font-size: 28px;
+            position: relative;
+            left: -4px;
+        }
+        .userimg {
+            height: 38px;
+            margin-left: 12px;
+            border-radius: 9999px;
+            vertical-align: bottom;
+        }
+        h6 {
+            margin: 0;
+            margin-left: 8px;
+            vertical-align: bottom;
+        }
+        nav {
+            display: flex !important;
+            flex: 1;
+            justify-content: flex-end;
+            ion-icon {
+                margin-right: 22px;
+                font-size: 28px;
+            }
+        }
+    }
+    .iclass_wrap {
+        ion-list-header {
+            margin-bottom: 0 !important;
+            border-top: 1px solid transparent;
+        }
+        width: 100%;
+        overflow: hidden;
+        .ic {
+            width: 20%;
+            margin-left: 4%;
+            margin-bottom: 4%;
+            height: 80px;
+            float: left;
+            position: relative;
+            img {
+                display: block;
+                width: 100%;
+            }
+            p {
+                position: absolute;
+                color: #fff;
+                bottom: 6px;
+                left: 0;
+                font-size: 16px !important;
+                line-height: 22px !important;
+                margin: 0;
+                width: 100%;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+    }
+}

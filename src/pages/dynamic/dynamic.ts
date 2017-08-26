@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 
 @Component({
   selector: 'page-dynamic',
@@ -7,8 +7,15 @@ import { NavController } from 'ionic-angular';
 })
 export class DynamicPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(
+    public navCtrl: NavController,
+    public menuCtrl: MenuController
+  ) {
 
+  }
+
+  openMenu() {
+    this.menuCtrl.open();
   }
 
 }
