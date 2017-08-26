@@ -15,6 +15,8 @@ import { ThemeProvider } from '../../providers/theme/theme';
 })
 export class CollectionPage {
 
+  page1: any = 'CollectWorkPage';
+  page2: any = 'CollectArticlePage';
   _theme;
 
   constructor(

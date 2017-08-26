@@ -1,3 +1,61 @@
 page-private-share {
-
+    ion-content {
+        background: #F4F4F4 !important;
+    }
+    .share_wrap {
+        width: 100%;
+        .share {
+            width: 100%;
+            padding: 3%;
+            background: #fff;
+            display: flex;
+            border-bottom: 1px solid #F4F4F4;
+            .userimg {
+                width: 30px;
+                height: 30px;
+                border-radius: 9999px;
+                margin-right: 12px;
+            }
+            .dec {
+                flex: 1;
+                .name {
+                    color: #7A7A7A;
+                    margin: 0;
+                    line-height: 30px;
+                    font-size: 16px;
+                }
+                .imgs_wrap {
+                    width: 100%;
+                    overflow: hidden;
+                    .imgs {
+                        width: 32.2%;
+                        background: yellow;
+                        margin-right: 1%;
+                        float: left;
+                        margin-bottom: 1%;
+                        background-size: cover !important;
+                        background-position: center center !important;
+                        &:before {
+                            content: "";
+                            display: inline-block;
+                            padding-bottom: 100%;
+                        }
+                    }
+                }
+                .bottom {
+                    width: 100%;
+                    overflow: hidden;
+                    padding: 10px 0;
+                    color: #7A7A7A;
+                    .time {
+                        float: left;
+                    }
+                    .comment {
+                        float: right;
+                        margin-right: 0.1%
+                    }
+                }
+            }
+        }
+    }
 }
