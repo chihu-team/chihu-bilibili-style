@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Storage } from '@ionic/storage';
 import 'rxjs/add/operator/map';
 
 /*
@@ -11,8 +11,29 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class UserProvider {
 
-  constructor(public http: Http) {
-    console.log('Hello UserProvider Provider');
+  _user = {
+    id:null  
+  }
+
+  constructor(
+    private storage: Storage
+  ) {
+    this.getUser();
+  }
+
+  getUser(){
+    this.storage.get('user').then((val) => {
+      if(val){
+        this._user = val;
+      }
+    })
+  }
+
+  setUser( user ){
+    this.storage.set('user', user).then(()=>{
+      this.getUser();
+    });
+    
   }
 
 }

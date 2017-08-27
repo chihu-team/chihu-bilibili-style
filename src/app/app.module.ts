@@ -16,6 +16,8 @@ import { AppVersion } from '@ionic-native/app-version';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import { ThemeProvider } from '../providers/theme/theme';
 import { UserProvider } from '../providers/user/user';
+import { JpushProvider } from '../providers/jpush/jpush';
+import { RongCloudProvider } from '../providers/rong-cloud/rong-cloud';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { UserProvider } from '../providers/user/user';
     AppVersion,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ThemeProvider,
-    UserProvider
+    UserProvider,
+    JpushProvider,
+    RongCloudProvider
   ]
 })
 export class AppModule {}
