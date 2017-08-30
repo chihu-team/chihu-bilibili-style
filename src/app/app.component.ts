@@ -3,6 +3,7 @@ import { Platform, NavController, MenuController, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ThemeProvider } from '../providers/theme/theme';
+import { UserProvider } from '../providers/user/user';
 import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
@@ -20,7 +21,8 @@ export class MyApp {
     splashScreen: SplashScreen,
     public themeProvider: ThemeProvider,
     public menuCtrl: MenuController,
-    public events: Events
+    public events: Events,
+    public userProvider: UserProvider
   ) {
     this._oldTheme = this._theme = this.themeProvider._theme;
     platform.ready().then(() => {
@@ -60,5 +62,16 @@ export class MyApp {
       this.themeProvider.setTheme( "theme_dark" );
     }
     
+  }
+
+  //检查登录状态
+  checkLogin(page){
+    
+    if(this.userProvider._user.id){
+      this.openPage(page);
+    }else{
+      this.menuCtrl.close();
+      this.nav.push( 'LoginPage' );
+    }
   }
 }

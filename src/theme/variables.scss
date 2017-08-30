@@ -101,6 +101,9 @@ svg {
             fill: #fff !important;
         }
     }
+    & .login_wrap {
+        background: #fb7299 !important;
+    }
 }
 
 //夜间模式
@@ -136,6 +139,9 @@ svg {
         .its svg {
             fill: #fff !important;
         }
+    }
+    & .login_wrap {
+        background: #2d2d2d !important;
     }
 }
 
@@ -173,6 +179,9 @@ svg {
             fill: #fff !important;
         }
     }
+    & .login_wrap {
+        background: #f44336 !important;
+    }
 }
 
 //咸蛋黄
@@ -208,6 +217,9 @@ svg {
         .its svg {
             fill: #fff !important;
         }
+    }
+    & .login_wrap {
+        background: #ffc107 !important;
     }
 }
 
@@ -245,6 +257,9 @@ svg {
             fill: #fff !important;
         }
     }
+    & .login_wrap {
+        background: #8bc34a !important;
+    }
 }
 
 //胖次蓝
@@ -281,6 +296,9 @@ svg {
             fill: #fff !important;
         }
     }
+    & .login_wrap {
+        background: #2196f3 !important;
+    }
 }
 
 //基佬紫
@@ -316,5 +334,8 @@ svg {
         .its svg {
             fill: #fff !important;
         }
+    }
+    & .login_wrap {
+        background: #9c27b0 !important;
     }
 }

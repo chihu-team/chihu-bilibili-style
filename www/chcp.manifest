@@ -12,6 +12,10 @@
     "hash": "0350f4b3a2067110b1e642ee5931a38a"
   },
   {
+    "file": "assets/icon/icon.png",
+    "hash": "5e2de2d77c790a11acd4f98105305e95"
+  },
+  {
     "file": "build/0.js",
     "hash": "15d4a801d3f947391dce34ffa15d4442"
   },
@@ -25,19 +29,19 @@
   },
   {
     "file": "build/11.js",
-    "hash": "503127f791fd4e4cc3b9604555b9082c"
+    "hash": "30993b106c3818f2247105de9f3d50a2"
   },
   {
     "file": "build/12.js",
-    "hash": "2fef5aabdbb9a8cab590bb79750c7bdd"
+    "hash": "816c014d61d0e1148a87fd16a43cce6c"
   },
   {
     "file": "build/13.js",
-    "hash": "8e1fce576eaef48842e5a9e079976eda"
+    "hash": "131f6afa115d06aad33403dc63e1c80e"
   },
   {
     "file": "build/14.js",
-    "hash": "22075fa013536f8058015bc50b4c04b7"
+    "hash": "0a55702d051512af72059b8ce2feca0d"
   },
   {
     "file": "build/15.js",
@@ -49,11 +53,11 @@
   },
   {
     "file": "build/17.js",
-    "hash": "a8c60401906bdb028c161fae6b6bd01d"
+    "hash": "109e612eba87d1d366d7c054d8fadd79"
   },
   {
     "file": "build/18.js",
-    "hash": "e1283b22da191bdddb51315fb4a87fd2"
+    "hash": "7dc493dd44835a08462c7fbee617a188"
   },
   {
     "file": "build/19.js",
@@ -81,11 +85,11 @@
   },
   {
     "file": "build/3.js",
-    "hash": "c6c3f387584106a24e6f8a8fdebfa97b"
+    "hash": "cbf1b28e793652c07087e3426df2db3b"
   },
   {
     "file": "build/4.js",
-    "hash": "cb6b5821f0c881a781f7e90c410127f8"
+    "hash": "05e7980834eb3de81f0f73980ac5a588"
   },
   {
     "file": "build/5.js",
@@ -109,11 +113,11 @@
   },
   {
     "file": "build/main.css",
-    "hash": "abffb5944bc5e94aa83227a6c6524d5e"
+    "hash": "e9d94479f99fb8f2b61c61b2c8a534dc"
   },
   {
     "file": "build/main.js",
-    "hash": "de45339941cac620e9b859cb03c46c4c"
+    "hash": "5de3a884dbd97bbfc8ed62d3abf8fe6f"
   },
   {
     "file": "build/polyfills.js",
@@ -125,7 +129,7 @@
   },
   {
     "file": "build/vendor.js",
-    "hash": "0ee941963e99b7531b3f036f82b8abea"
+    "hash": "4d1af4e4dee7fbcd7a5e34436f13b58b"
   },
   {
     "file": "index.html",

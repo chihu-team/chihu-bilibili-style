@@ -4,15 +4,33 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header no-border>
 
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
+    <ion-navbar [ngClass]="{'theme_pink':_theme == 'theme_pink','theme_dark':_theme == 'theme_dark','theme_red':_theme == 'theme_red','theme_yellow':_theme == 'theme_yellow','theme_green':_theme == 'theme_green','theme_blue':_theme == 'theme_blue','theme_purple':_theme == 'theme_purple'}">
+        <ion-title>登录</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only>
+                  <ion-icon name="more"></ion-icon>
+              </button>
+        </ion-buttons>
+    </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content [ngClass]="{'theme_pink':_theme == 'theme_pink','theme_dark':_theme == 'theme_dark','theme_red':_theme == 'theme_red','theme_yellow':_theme == 'theme_yellow','theme_green':_theme == 'theme_green','theme_blue':_theme == 'theme_blue','theme_purple':_theme == 'theme_purple'}">
+    <section class="login_wrap">
 
+        <img class="logo" src="assets/icon/icon.png" alt="">
+
+        <input placeholder="账号：" type="text">
+        <input placeholder="密码：" type="password">
+
+        <button ion-button full>登录</button>
+    </section>
+    <ion-footer [ngClass]="{'theme_pink':_theme == 'theme_pink','theme_dark':_theme == 'theme_dark','theme_red':_theme == 'theme_red','theme_yellow':_theme == 'theme_yellow','theme_green':_theme == 'theme_green','theme_blue':_theme == 'theme_blue','theme_purple':_theme == 'theme_purple'}">
+        <ion-toolbar>
+            <span class="Copyright">MIT License Copyright (c) 2017 Devon</span>
+        </ion-toolbar>
+    </ion-footer>
 </ion-content>
