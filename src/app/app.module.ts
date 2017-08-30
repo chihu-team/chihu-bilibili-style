@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { IonicStorageModule } from '@ionic/storage';
+import { HttpModule } from '@angular/http';
 
 import { IclassPage } from '../pages/iclass/iclass';
 import { DynamicPage } from '../pages/dynamic/dynamic';
@@ -34,7 +35,8 @@ import { RongCloudProvider } from '../providers/rong-cloud/rong-cloud';
       tabsHideOnSubPages: true
     }),
     SuperTabsModule.forRoot(),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

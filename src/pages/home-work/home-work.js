@@ -26,6 +26,7 @@ export default StyleSheet.create({
   },
   'page-home-work card_wrap card dec': {
     'width': [{ 'unit': '%H', 'value': 1 }],
+    'minHeight': [{ 'unit': 'px', 'value': 42 }],
     'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': '%H', 'value': 0.03 }, { 'unit': 'px', 'value': 0 }, { 'unit': '%H', 'value': 0.03 }]
   },
   'page-home-work card_wrap card dec p': {
