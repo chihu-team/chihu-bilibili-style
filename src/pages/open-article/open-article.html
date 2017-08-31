@@ -6,8 +6,8 @@
 -->
 <ion-header no-border>
 
-    <ion-navbar>
-        <ion-title>如何制作辣炒花蛤</ion-title>
+    <ion-navbar [ngClass]="{'theme_pink':_theme == 'theme_pink','theme_dark':_theme == 'theme_dark','theme_red':_theme == 'theme_red','theme_yellow':_theme == 'theme_yellow','theme_green':_theme == 'theme_green','theme_blue':_theme == 'theme_blue','theme_purple':_theme == 'theme_purple'}">
+        <ion-title>{{_data.title}}</ion-title>
         <ion-buttons end>
             <button ion-button icon-only>
                 <ion-icon name="more"></ion-icon>
@@ -21,14 +21,14 @@
 <ion-content>
     <div class="article">
 
-        <h4>如何制作辣炒花蛤</h4>
+        <h4>{{_data.title}}</h4>
         <header>
             <img class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" alt="">
-            <p>Devon</p>
+            <p>{{_data.uname}}</p>
 
             <p class="btn">关注</p>
         </header>
-        <p>花蛤餐桌上经常出现的，夏季时候做法比较清淡，随着秋分时节到来，对我来说，食辣的季节也来了。 好吧，先拿花蛤开刀，几分钟时间，家庭版销魂的辣味海鲜菜就做成了。</p>
+        <p>{{_data.text}}</p>
         <p class="buttom">45评论 | 123收藏 | 时间：13:45</p>
 
     </div>

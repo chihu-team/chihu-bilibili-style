@@ -23,10 +23,10 @@
 
         <img class="logo" src="assets/icon/icon.png" alt="">
 
-        <input placeholder="账号：" type="text">
-        <input placeholder="密码：" type="password">
+        <input placeholder="账号：" [(ngModel)]="name" type="text">
+        <input placeholder="密码：" [(ngModel)]="pass" type="password">
 
-        <button ion-button full>登录</button>
+        <button ion-button full (click)="login();">登录</button>
     </section>
     <ion-footer [ngClass]="{'theme_pink':_theme == 'theme_pink','theme_dark':_theme == 'theme_dark','theme_red':_theme == 'theme_red','theme_yellow':_theme == 'theme_yellow','theme_green':_theme == 'theme_green','theme_blue':_theme == 'theme_blue','theme_purple':_theme == 'theme_purple'}">
         <ion-toolbar>

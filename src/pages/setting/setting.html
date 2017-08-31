@@ -25,5 +25,5 @@
     </ion-list>
     <br>
     <br>
-    <button ion-button full color="danger">注销当前账号</button>
+    <button (click)="exit();" ion-button full color="danger" *ngIf="_id != null">注销当前账号</button>
 </ion-content>

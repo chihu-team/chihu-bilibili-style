@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
+import { Events } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 
 /*
@@ -12,11 +13,14 @@ import 'rxjs/add/operator/map';
 export class UserProvider {
 
   _user = {
-    id:null  
+    _id:null,
+    userimg:'https://avatars2.githubusercontent.com/u/11835988?v=4&s=120',
+    name:'游客',  
   }
 
   constructor(
-    private storage: Storage
+    private storage: Storage,
+    private events: Events
   ) {
     this.getUser();
   }
@@ -25,6 +29,7 @@ export class UserProvider {
     this.storage.get('user').then((val) => {
       if(val){
         this._user = val;
+        this.events.publish('user', this._user);
       }
     })
   }
@@ -34,6 +39,16 @@ export class UserProvider {
       this.getUser();
     });
     
+  }
+
+  exit(){
+    this.storage.clear();
+    this._user = {
+      _id:null,
+      userimg:'https://avatars2.githubusercontent.com/u/11835988?v=4&s=120',
+      name:'游客',  
+    };
+    this.events.publish('user', this._user);
   }
 
 }

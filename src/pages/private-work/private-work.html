@@ -14,93 +14,27 @@
 
 
 <ion-content>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
     <section class="card_wrap">
-        <section class="card" (click)="open();">
-            <div class="ban" [style.background]="'url(https://i0.hdslb.com/bfs/archive/dff505287fcd26bc6b30ba9abf91ee62de66eb73.jpg@440w_220h.webp)'"></div>
+
+        <section *ngFor="let it of items" class="card" (click)="open( it._id );">
+            <div class="ban" [style.background]="'url('+it.banner+')'"></div>
             <div class="dec">
-                <p>2017 bilibili moe 日本动画场</p>
+                <p>{{it.title}}</p>
             </div>
             <div class="bottom">
-                <span class="name">Devon</span>
-                <span class="time">13:56</span>
+                <span class="name">{{it.uname}}</span>
+                <span class="time">{{it.time | date}}</span>
             </div>
         </section>
 
-        <section class="card" (click)="open();">
-            <div class="ban" [style.background]="'url(https://i0.hdslb.com/bfs/archive/dff505287fcd26bc6b30ba9abf91ee62de66eb73.jpg@440w_220h.webp)'"></div>
-            <div class="dec">
-                <p>2017 bilibili moe 日本动画场</p>
-            </div>
-            <div class="bottom">
-                <span class="name">Devon</span>
-                <span class="time">13:56</span>
-            </div>
-        </section>
-
-        <section class="card" (click)="open();">
-            <div class="ban" [style.background]="'url(https://i0.hdslb.com/bfs/archive/dff505287fcd26bc6b30ba9abf91ee62de66eb73.jpg@440w_220h.webp)'"></div>
-            <div class="dec">
-                <p>2017 bilibili moe 日本动画场</p>
-            </div>
-            <div class="bottom">
-                <span class="name">Devon</span>
-                <span class="time">13:56</span>
-            </div>
-        </section>
-
-        <section class="card" (click)="open();">
-            <div class="ban" [style.background]="'url(https://i0.hdslb.com/bfs/archive/dff505287fcd26bc6b30ba9abf91ee62de66eb73.jpg@440w_220h.webp)'"></div>
-            <div class="dec">
-                <p>2017 bilibili moe 日本动画场</p>
-            </div>
-            <div class="bottom">
-                <span class="name">Devon</span>
-                <span class="time">13:56</span>
-            </div>
-        </section>
-
-        <section class="card">
-            <div class="ban" [style.background]="'url(https://i0.hdslb.com/bfs/archive/dff505287fcd26bc6b30ba9abf91ee62de66eb73.jpg@440w_220h.webp)'"></div>
-            <div class="dec">
-                <p>2017 bilibili moe 日本动画场</p>
-            </div>
-            <div class="bottom">
-                <span class="name">Devon</span>
-                <span class="time">13:56</span>
-            </div>
-        </section>
-
-        <section class="card" (click)="open();">
-            <div class="ban" [style.background]="'url(https://i0.hdslb.com/bfs/archive/dff505287fcd26bc6b30ba9abf91ee62de66eb73.jpg@440w_220h.webp)'"></div>
-            <div class="dec">
-                <p>2017 bilibili moe 日本动画场</p>
-            </div>
-            <div class="bottom">
-                <span class="name">Devon</span>
-                <span class="time">13:56</span>
-            </div>
-        </section>
-
-        <section class="card" (click)="open();">
-            <div class="ban" [style.background]="'url(https://i0.hdslb.com/bfs/archive/dff505287fcd26bc6b30ba9abf91ee62de66eb73.jpg@440w_220h.webp)'"></div>
-            <div class="dec">
-                <p>2017 bilibili moe 日本动画场</p>
-            </div>
-            <div class="bottom">
-                <span class="name">Devon</span>
-                <span class="time">13:56</span>
-            </div>
-        </section>
-
-        <section class="card" (click)="open();">
-            <div class="ban" [style.background]="'url(https://i0.hdslb.com/bfs/archive/dff505287fcd26bc6b30ba9abf91ee62de66eb73.jpg@440w_220h.webp)'"></div>
-            <div class="dec">
-                <p>2017 bilibili moe 日本动画场</p>
-            </div>
-            <div class="bottom">
-                <span class="name">Devon</span>
-                <span class="time">13:56</span>
-            </div>
-        </section>
     </section>
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>

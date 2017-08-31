@@ -14,71 +14,28 @@
 
 
 <ion-content>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
     <section class="article_wrap">
-        <div class="article" (click)="open();">
+
+        <div *ngFor="let it of items" class="article" (click)="open( it._id );">
             <header>
-                <img class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" alt="">
-                <p>Devon</p>
-                <p class="time">13:56</p>
+                <img class="userimg" [src]="it.userimg" alt="">
+                <p>{{it.uname}}</p>
+                <p class="time">{{it.time | date}}</p>
             </header>
-            <h5>如何制作辣炒花蛤</h5>
-            <p>花蛤餐桌上经常出现的，夏季时候做法比较清淡，随着秋分时节到来，对我来说，食辣的季节也来了。 好吧，先拿花蛤开刀，几分钟时间，家庭版销魂的辣味海鲜菜就做成了。</p>
+            <h5>{{it.title}}</h5>
+            <p>{{it.text}}</p>
             <p class="buttom">45评论 | 123收藏</p>
         </div>
 
-        <div class="article" (click)="open();">
-            <header>
-                <img class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" alt="">
-                <p>Devon</p>
-                <p class="time">13:56</p>
-            </header>
-            <h5>如何制作辣炒花蛤</h5>
-            <p>花蛤餐桌上经常出现的，夏季时候做法比较清淡，随着秋分时节到来，对我来说，食辣的季节也来了。 好吧，先拿花蛤开刀，几分钟时间，家庭版销魂的辣味海鲜菜就做成了。</p>
-            <p class="buttom">45评论 | 123收藏</p>
-        </div>
-
-        <div class="article" (click)="open();">
-            <header>
-                <img class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" alt="">
-                <p>Devon</p>
-                <p class="time">13:56</p>
-            </header>
-            <h5>如何制作辣炒花蛤</h5>
-            <p>花蛤餐桌上经常出现的，夏季时候做法比较清淡，随着秋分时节到来，对我来说，食辣的季节也来了。 好吧，先拿花蛤开刀，几分钟时间，家庭版销魂的辣味海鲜菜就做成了。</p>
-            <p class="buttom">45评论 | 123收藏</p>
-        </div>
-
-        <div class="article" (click)="open();">
-            <header>
-                <img class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" alt="">
-                <p>Devon</p>
-                <p class="time">13:56</p>
-            </header>
-            <h5>如何制作辣炒花蛤</h5>
-            <p>花蛤餐桌上经常出现的，夏季时候做法比较清淡，随着秋分时节到来，对我来说，食辣的季节也来了。 好吧，先拿花蛤开刀，几分钟时间，家庭版销魂的辣味海鲜菜就做成了。</p>
-            <p class="buttom">45评论 | 123收藏</p>
-        </div>
-
-        <div class="article" (click)="open();">
-            <header>
-                <img class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" alt="">
-                <p>Devon</p>
-                <p class="time">13:56</p>
-            </header>
-            <h5>如何制作辣炒花蛤</h5>
-            <p>花蛤餐桌上经常出现的，夏季时候做法比较清淡，随着秋分时节到来，对我来说，食辣的季节也来了。 好吧，先拿花蛤开刀，几分钟时间，家庭版销魂的辣味海鲜菜就做成了。</p>
-            <p class="buttom">45评论 | 123收藏</p>
-        </div>
-
-        <div class="article" (click)="open();">
-            <header>
-                <img class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" alt="">
-                <p>Devon</p>
-                <p class="time">13:56</p>
-            </header>
-            <h5>如何制作辣炒花蛤</h5>
-            <p>花蛤餐桌上经常出现的，夏季时候做法比较清淡，随着秋分时节到来，对我来说，食辣的季节也来了。 好吧，先拿花蛤开刀，几分钟时间，家庭版销魂的辣味海鲜菜就做成了。</p>
-            <p class="buttom">45评论 | 123收藏</p>
-        </div>
     </section>
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
 </ion-content>

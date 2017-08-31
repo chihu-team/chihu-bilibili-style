@@ -2,8 +2,8 @@
     <ion-navbar>
         <section class="iheader">
             <ion-icon name="list" (click)="openMenu()"></ion-icon>
-            <img (click)="openMenu()" class="userimg" src="https://avatars2.githubusercontent.com/u/11835988?v=4&s=120" />
-            <h6>Devon</h6>
+            <img (click)="openMenu()" class="userimg" [src]="_user.userimg" />
+            <h6>{{_user.name}}</h6>
             <nav>
                 <ion-icon name="notifications"></ion-icon>
                 <ion-icon name="chatbubbles"></ion-icon>

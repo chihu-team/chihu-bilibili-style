@@ -14,6 +14,10 @@ export class MyApp {
   rootPage:any = TabsPage;
   _theme;
   _oldTheme;
+  _user = {
+    userimg:'https://avatars2.githubusercontent.com/u/11835988?v=4&s=120',
+    name:'游客',
+  };
 
   constructor(
     platform: Platform, 
@@ -33,6 +37,9 @@ export class MyApp {
     });
     events.subscribe('theme', (theme) => {
       this._oldTheme = this._theme = theme;
+    });
+    events.subscribe('user', (user) => {
+      this._user = user;
     });
   }
 
@@ -67,7 +74,7 @@ export class MyApp {
   //检查登录状态
   checkLogin(page){
     
-    if(this.userProvider._user.id){
+    if(this.userProvider._user._id){
       this.openPage(page);
     }else{
       this.menuCtrl.close();

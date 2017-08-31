@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
+import { ThemeProvider } from '../../providers/theme/theme';
 /**
  * Generated class for the OpenSharePage page.
  *
@@ -22,8 +23,10 @@ export class OpenSharePage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public http: Http
+    public http: Http,
+    public themeProvider: ThemeProvider,
   ) {
+    this._theme = this.themeProvider._theme;
     this._id = this.navParams.get( '_id' );
     this.getdata();
   }

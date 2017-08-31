@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { ThemeProvider } from '../../providers/theme/theme';
+import { Headers, Http } from '@angular/http';
 /**
  * Generated class for the OpenArticlePage page.
  *
@@ -16,12 +17,35 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class OpenArticlePage {
 
   _theme;
+  _id;
+  _data:any = {};
 
   constructor(
     public navCtrl: NavController, 
+    public themeProvider: ThemeProvider,
+    public http: Http,
     public navParams: NavParams
   ) {
-    
+    this._theme = this.themeProvider._theme;
+    this._id = this.navParams.get( '_id' );
+    this.getdata();
   }
+
+  //获取数据
+  getdata() {
+    
+        let url = "https://www.devonhello.com/chihuv3/open_question";
+    
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+    
+        this.http.post(url, "id=" + this._id, {
+          headers: headers
+        })
+          .subscribe((res) => {
+            this._data = res.json()[0];
+            console.log( this._data );
+          });
+      }
 
 }
