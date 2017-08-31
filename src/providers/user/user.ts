@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { Events } from 'ionic-angular';
+import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -13,42 +14,62 @@ import 'rxjs/add/operator/map';
 export class UserProvider {
 
   _user = {
-    _id:null,
-    userimg:'https://avatars2.githubusercontent.com/u/11835988?v=4&s=120',
-    name:'游客',  
+    _id: null,
+    userimg: 'https://avatars2.githubusercontent.com/u/11835988?v=4&s=120',
+    name: '游客',
   }
+
+  _friend = [];
 
   constructor(
     private storage: Storage,
-    private events: Events
+    private events: Events,
+    public http: Http
   ) {
     this.getUser();
   }
 
-  getUser(){
+  getUser() {
     this.storage.get('user').then((val) => {
-      if(val){
+      if (val) {
         this._user = val;
+        this.GetFriend();
         this.events.publish('user', this._user);
       }
     })
   }
 
-  setUser( user ){
-    this.storage.set('user', user).then(()=>{
+  setUser(user) {
+    this.storage.set('user', user).then(() => {
       this.getUser();
     });
-    
+
   }
 
-  exit(){
+  exit() {
     this.storage.clear();
     this._user = {
-      _id:null,
-      userimg:'https://avatars2.githubusercontent.com/u/11835988?v=4&s=120',
-      name:'游客',  
+      _id: null,
+      userimg: 'https://avatars2.githubusercontent.com/u/11835988?v=4&s=120',
+      name: '游客',
     };
+    this._friend = [];
     this.events.publish('user', this._user);
+  }
+
+  GetFriend() {
+    let url = "https://www.devonhello.com/chihuv3/get_friend";
+
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    this.http.post(url, "id=" + this._user._id, {
+      headers: headers
+    })
+      .subscribe((res) => {
+        console.log(res.json());
+        this._friend = res.json();
+      });
   }
 
 }

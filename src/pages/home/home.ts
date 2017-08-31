@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController, Events } from 'ionic-angular';
+import { UserProvider } from '../../providers/user/user';
 
 @Component({
   selector: 'page-home',
@@ -12,16 +13,15 @@ export class HomePage {
   page3: any = 'HomeArticlePage';
 
   _theme;
-  _user = {
-    userimg:'https://avatars2.githubusercontent.com/u/11835988?v=4&s=120',
-    name:'游客',
-  };
+  _user;
 
   constructor(
     public navCtrl: NavController,
     public menuCtrl: MenuController,
-    public events: Events
+    public events: Events,
+    public userProvider: UserProvider
   ) {
+    this._user = this.userProvider._user;
     events.subscribe('user', (user) => {
       this._user = user;
     });
