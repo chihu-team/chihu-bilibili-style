@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { ThemeProvider } from '../../providers/theme/theme';
 /**
@@ -19,15 +19,18 @@ export class OpenWorkPage {
   _theme;
   _id;
   _data:any = {};
+  _popover;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     public themeProvider: ThemeProvider,
-    public http: Http
+    public http: Http,
+    public popoverCtrl: PopoverController
   ) {
     this._theme = this.themeProvider._theme;
     this._id = this.navParams.get( '_id' );
+    this._popover = this.popoverCtrl.create('PopoverWorkPage');
     this.getdata();
   }
 
@@ -46,6 +49,10 @@ export class OpenWorkPage {
             this._data = res.json()[0];
             console.log( this._data );
           });
+      }
+  
+      presentPopover(ev) {
+        this._popover.present({ ev: ev });
       }
 
 }

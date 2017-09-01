@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
 import { ThemeProvider } from '../../providers/theme/theme';
 import { Headers, Http } from '@angular/http';
 /**
@@ -19,15 +19,18 @@ export class OpenArticlePage {
   _theme;
   _id;
   _data:any = {};
+  _popover;
 
   constructor(
     public navCtrl: NavController, 
     public themeProvider: ThemeProvider,
     public http: Http,
-    public navParams: NavParams
+    public navParams: NavParams,
+    public popoverCtrl: PopoverController
   ) {
     this._theme = this.themeProvider._theme;
     this._id = this.navParams.get( '_id' );
+    this._popover = this.popoverCtrl.create('PopoverQuestionPage');
     this.getdata();
   }
 
@@ -46,6 +49,10 @@ export class OpenArticlePage {
             this._data = res.json()[0];
             console.log( this._data );
           });
+      }
+
+      presentPopover(ev) {
+        this._popover.present({ ev: ev });
       }
 
 }
