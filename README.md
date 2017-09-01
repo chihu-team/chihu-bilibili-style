@@ -2,15 +2,6 @@ This is a App for [Ionic](http://ionicframework.com/docs/) projects.
 
 ## How to use this 
 
-
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
-```
-
-Then, to run it, cd into `myTabs` and run:
-
 ```bash
 #Clone with https://github.com/chihu-team/chihu-bilibili-style.git
 $ npm i
