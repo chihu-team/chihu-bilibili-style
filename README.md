@@ -1,5 +1,7 @@
 This is a App for [Ionic](http://ionicframework.com/docs/) projects.
 
+Continuously updated
+
 ## How to use this 
 
 ```bash
