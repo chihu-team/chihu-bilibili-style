@@ -19,7 +19,7 @@ export class OpenArticlePage {
   _theme;
   _id;
   _data:any = {};
-  _popover;
+  _popover = null;
 
   constructor(
     public navCtrl: NavController, 
@@ -30,7 +30,6 @@ export class OpenArticlePage {
   ) {
     this._theme = this.themeProvider._theme;
     this._id = this.navParams.get( '_id' );
-    this._popover = this.popoverCtrl.create('PopoverQuestionPage');
     this.getdata();
   }
 
@@ -47,12 +46,18 @@ export class OpenArticlePage {
         })
           .subscribe((res) => {
             this._data = res.json()[0];
+            this._popover = this.popoverCtrl.create('PopoverQuestionPage',{
+              _data: this._data
+            });
             console.log( this._data );
           });
       }
 
       presentPopover(ev) {
-        this._popover.present({ ev: ev });
+        if(this._popover){
+          this._popover.present({ ev: ev });
+        }
+        
       }
 
 }

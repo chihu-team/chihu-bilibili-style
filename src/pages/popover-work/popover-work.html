@@ -7,7 +7,8 @@
 
 <ion-content>
     <ion-list no-border>
-        <ion-item>收藏</ion-item>
+        <ion-item [hidden]="!_ishidden" (click)="collect();">收藏</ion-item>
+        <ion-item [hidden]="_ishidden" (click)="uncollect();">取消收藏</ion-item>
         <ion-item>评论</ion-item>
         <ion-item>举报</ion-item>
     </ion-list>

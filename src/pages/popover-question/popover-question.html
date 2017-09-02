@@ -7,9 +7,9 @@
 
 <ion-content>
     <ion-list no-border>
-        <ion-item>收藏</ion-item>
-        <ion-item>评论</ion-item>
-        <ion-item>关注问题</ion-item>
+        <ion-item>回答</ion-item>
+        <ion-item [hidden]="!_ishidden" (click)="fork();">关注问题</ion-item>
+        <ion-item [hidden]="_ishidden" (click)="unfork();">取消关注</ion-item>
         <ion-item>举报</ion-item>
     </ion-list>
 </ion-content>
